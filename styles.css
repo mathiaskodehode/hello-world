@@ -58,3 +58,7 @@ ul.listElements {
     border: 2px dashed;
     border-top: 5px solid;
 }
+
+footer.footer {
+    text-align-last: center;
+}
