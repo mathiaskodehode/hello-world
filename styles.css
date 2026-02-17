@@ -39,16 +39,17 @@ div.intro {
     border-radius: 32%;
 }
 
-div.list {
+div.textBox {
     text-align: center;
-    border: 2px solid;
-    padding: 0px;
-    margin: 0px;
+}
+
+main{
     font-family: roboto;
 }
 
-div.textBox {
+div.list {
     text-align: center;
+    border: 2px solid;
 }
 
 ul.listElements {
