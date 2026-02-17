@@ -39,14 +39,10 @@ main {
 }
 
 div.list {
-    margin-top: 55px;
+    margin: 0px;
     border: 2px solid;
-}
-
-ul.listElements {
-    display: inline-block;
-    padding: 5px;
-    margin: 5px;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 footer.footer {
