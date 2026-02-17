@@ -54,3 +54,7 @@ body {
     color: rgb(185, 185, 185);
     text-align: center;
 }
+
+.border{
+    border: 3px red;
+}
