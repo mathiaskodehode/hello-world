@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 h1 {
     color: red;
     text-align: center;
@@ -28,13 +30,29 @@ h6 {
     text-align: center;
 }
 
-p {
+/* p {
     text-align: center;
+} */
+
+div.intro {
+    text-align: center;
+    border-top: 2px blue solid;
+    border-left: 4px red dashed;
+    border-bottom: 8px blue solid;
+    border-right: 16px red dotted;
+    border-radius: 32%;
 }
 
-div.listThing {
+div.list {
     text-align: center;
     border: 2px solid;
+    padding: 0px;
+    margin: 0px;
+    font-family: roboto;
+}
+
+div.textBox {
+    text-align: center;
 }
 
 ul.listElements {

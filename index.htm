@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <audio id="bruh" src="bruh.mp3"></audio>
 </head>
+
 <h1>Heading1</h1>
 <h2>Heading2</h2>
 <h3>Heading3</h3>
@@ -16,47 +17,64 @@
 <h6>Heading6</h6>
 
 <body>
-    <p>
-        Hello my name is paragraph.
-    </p>
-    <p>
-        Wow, my name is<br>
-        also paragraph, but<br>
-        I have a middle<br>
-        name too - it's break.
-    </p>
-    <p>
-        <strong>
-            bold text is illegal. strong text however, is legal.
-        </strong>
-    </p>
-    <p>
-        <em>
-            Emphasis.
-            <button onclick="document.getElementById('bruh').play();">
-                bruh
-            </button>
-        </em>
-    </p>
-    <p>
-        <img src="./image.png" alt="a screenshot of the preview" width="350">
-    </p>
-    <menu>
-        <p>
-            List of items
-        </p>
-        <div class="listThing">
-                <ul class="listElements">
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-            </ul>
+    <main>
+        <div class="intro">
+            <p>
+                Hello my name is paragraph.
+            </p>
+            <p>
+                Wow, my name is<br>
+                also paragraph, but<br>
+                I have a middle<br>
+                name too - it's break.
+            </p>
+            <p>
+                <strong>
+                    bold text is illegal. strong text however, is legal.
+                </strong>
+            </p>
+            <p>
+                this text is inside a
+                <span style="color:red">red</span> and
+                <span style="color:blue">blue</span>
+                border. it's
+                <span style="border: solid">solid</span>,
+                <span style="border: dotted">dotted</span>, and
+                <span style="border: dashed">dashed</span>.
+            </p>
+            <p>
+                <em>
+                    Emphasis.
+                    <button onclick="document.getElementById('bruh').play();">
+                        bruh
+                    </button>
+                </em>
+            </p>
+            <p>
+                <img src="./image.png" alt="a screenshot of the preview" width="350">
+            </p>
         </div>
-    </menu>
-    <hr>
-    <footer>
-        <a href="https://github.com/mathiaskodehode/hello-world">src</a>
-    </footer>
+        <menu>
+            <div class="list">
+                <p>
+                    List of items
+                </p>
+                <ul class="listElements">
+                    <li>item</li>
+                    <li>item with long name</li>
+                    <li>item with an even longer name</li>
+                </ul>
+            </div>
+        </menu>
+        <div class="textBox">
+            <label for="fname">text box:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+        </div>
+        <hr>
+        <footer>
+            <a href="https://github.com/mathiaskodehode/hello-world" target="_blank">src</a>
+        </footer>
+    </main>
 </body>
 
 </html>
