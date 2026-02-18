@@ -81,7 +81,7 @@
             </div>
         </div>
         <p>
-            enter your bank details: <input>
+            enter your bank details: <input onchange="onBankDetailsEntered()">
         </p>
         <div class="rowContainer">
             <div class="containerItem">
@@ -126,6 +126,10 @@
             console.debug(borders[i]);
             borders[i].classList.toggle("border");
         }
+    }
+
+    function onBankDetailsEntered() {
+        window.prompt("How much money do you want to send to Mathias","99999999999999999999");
     }
 </script>
 
