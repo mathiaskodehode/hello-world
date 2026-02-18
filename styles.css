@@ -39,7 +39,8 @@ main {
 }
 
 div.list {
-    margin: 0px;
+    margin: 15px 25px;
+    padding: 5px 10px;
     border: 2px solid;
     display: inline-flex;
     flex-direction: column;
@@ -56,5 +57,10 @@ body {
 }
 
 .border{
-    border: 3px red;
+    border: 3px red solid;
+}
+
+button{
+    background-color: rgb(128, 128, 128);
+    /* color: rgb(255, 255, 255); */
 }
