@@ -6,33 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELLO THIS IS THE TITLE</title>
     <link rel="stylesheet" href="styles.css">
-    <audio id="bruh" src="bruh.mp3"></audio>
+    <!-- <audio id="bruh" src="bruh.mp3"></audio> -->
 </head>
 
-<h1>Heading1</h1>
-<h2>Heading2</h2>
-<h3>Heading3</h3>
-<h4>Heading4</h4>
-<h5>Heading5</h5>
-<h6>Heading6</h6>
 
 <body>
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <h4>Heading4</h4>
+    <h5>Heading5</h5>
+    <h6>Heading6</h6>
+    <button type="button" onclick="toggleBorders()">
+        TOGGLE BORDER ON ALL ELEMENTS INSIDE BODY
+    </button>
     <main>
         <div class="intro">
-            <p>
-                Hello my name is paragraph.
-            </p>
-            <p>
-                Wow, my name is<br>
-                also paragraph, but<br>
-                I have a middle<br>
-                name too - it's break.
-            </p>
-            <p>
-                <strong>
-                    bold text is illegal. strong text however, is legal.
-                </strong>
-            </p>
+            <div class="rowContainer">
+                <div class="containerItem">
+
+                    <p>
+                        Hello my name is paragraph.
+                    </p>
+                </div>
+                <div class="containerItem">
+                    <p>
+                        Wow, my name is<br>
+                        also paragraph, but<br>
+                        I have a middle<br>
+                        name too - it's break.
+                    </p>
+                </div>
+                <div class="containerItem">
+                    <p>
+                        <strong>
+                            bold text is illegal. strong text however, is legal.
+                        </strong>
+                    </p>
+                </div>
+            </div>
             <p>
                 this entire section is inside a
                 <span style="color:red">red</span> and
@@ -58,27 +70,63 @@
             <h2>
                 List of items
             </h2>
-            <div>
+            <div class="containerItem">
                 item
             </div>
-            <div>
+            <div class="containerItem">
                 item with long name
             </div>
-            <div>
+            <div class="containerItem">
                 item with an even longer name
             </div>
         </div>
         <p>
             enter your bank details: <input>
         </p>
+        <div class="rowContainer">
+            <div class="containerItem">
+                <p>Hello i am on the left (textually)</p>
+            </div>
+            <div class="containerItem">
+                <p>Hello i am an idiot (generally) <br>
+                    line break <br>
+                    another line break...</p>
+            </div>
+        </div>
     </main>
     <hr>
-    <footer class="footer border">
+    <footer class="footer">
         <p>
             a webpage by Mathias.
         </p>
         <a href="https://github.com/mathiaskodehode/hello-world" target="_blank">src</a>
     </footer>
 </body>
+
+<script>
+    // script is at the bottom to make sure all elements have been loaded
+
+    // get all elements inside <body>
+    const bodyElements = document.body.getElementsByTagName("*");
+    const borders = [];
+    for (let i = 0; i < bodyElements.length; i++) {
+        var e = bodyElements[i];
+        // ignore elements that already have the border class
+        if (e.classList.contains("border")) continue;
+        // add border class to elements that don't have it
+        e.classList.add("border");
+        // populate array with the elements we added the border class to
+        borders.push(e);
+        // toggle the border class off (it is on by default)
+        borders[i].classList.toggle("border");
+    }
+
+    function toggleBorders() {
+        for (let i = 0; i < borders.length; i++) {
+            console.debug(borders[i]);
+            borders[i].classList.toggle("border");
+        }
+    }
+</script>
 
 </html>

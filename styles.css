@@ -32,6 +32,8 @@ div.intro {
     border-bottom: 8px blue solid;
     border-right: 16px red dotted;
     border-radius: 32%;
+    padding: 15px;
+    margin: 15px;
 }
 
 main {
@@ -63,4 +65,17 @@ body {
 button{
     background-color: rgb(128, 128, 128);
     /* color: rgb(255, 255, 255); */
+}
+
+.rowContainer{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.containerItem{
+    margin: 5px 15px;
+    padding: 5px 10px;
+    /* background-color: rgb(16, 16, 16); */
 }
