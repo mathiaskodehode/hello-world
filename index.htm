@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELLO THIS IS THE TITLE</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <audio id="bruh" src="bruh.mp3"></audio> -->
+    <audio id='moo' src="./audio/cow.mp3"></audio>
 </head>
 
 <body>
@@ -58,11 +58,11 @@
                     Emphasis.
                 </em>
             </p>
-            <button onclick="document.getElementById('bruh').play();">
-                bruh 💀
+            <button onclick="document.getElementById('moo').play();">
+                moo 🐄
             </button>
             <p>
-                <img src="./image.png" alt="a screenshot of the html file" width="450">
+                <img src="./images/image.png" alt="a screenshot of the html file" width="450">
             </p>
         </div>
         <div class="list">
@@ -145,11 +145,11 @@
         let input = document.getElementById("bankDetailsInput").value.replaceAll(" ", "");
         // change the text in the input field
         document.getElementById("bankDetailsInput").value = input;
+        // if the input is empty we don't want to do anything;
+        if (input == "") return;
         // wait for 0 milliseconds so the code above updates the input text before the alert/promt shows up
         // this feels so stupid
         setTimeout(() => {
-            // if the input is empty we don't want to do anything;
-            if (input == "") return;
             // make sure the input is a number
             if (!isNaN(input)) {
                 window.prompt("How much money do you want to send to Mathias", "99999999999999999999");
