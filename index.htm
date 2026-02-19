@@ -128,20 +128,25 @@
             debugOutlines[i].classList.toggle("debugOutline");
         }
     }
-    
+
     function onBankDetailsChanged() {
         // get the input string without the spaces
         let input = document.getElementById("bankDetailsInput").value.replaceAll(" ", "");
         // change the text in the input field
         document.getElementById("bankDetailsInput").value = input;
-        // if the input is empty we don't want to do anything;
-        if (input == "") return;
-        if (!isNaN(input)) {
-            window.prompt("How much money do you want to send to Mathias", "99999999999999999999");
-        }
-        else {
-            alert("Invalid bank details. (only numbers)");
-        }
+        // wait for 0 milliseconds so the code above updates the input text before the alert/promt shows up
+        // this feels so stupid
+        setTimeout(() => {
+            // if the input is empty we don't want to do anything;
+            if (input == "") return;
+            // make sure the input is a number
+            if (!isNaN(input)) {
+                window.prompt("How much money do you want to send to Mathias", "99999999999999999999");
+            }
+            else {
+                alert("Invalid bank details. (only numbers)");
+            }
+        }, 0);
     }
 </script>
 
