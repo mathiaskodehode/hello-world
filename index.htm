@@ -9,7 +9,6 @@
     <!-- <audio id="bruh" src="bruh.mp3"></audio> -->
 </head>
 
-
 <body>
     <h1>Heading1</h1>
     <h2>Heading2</h2>
@@ -80,9 +79,11 @@
                 item with an even longer name
             </div>
         </div>
-        <p>
-            enter your bank details: <input onchange="onBankDetailsEntered()">
-        </p>
+        <div>
+            <p>
+                enter your bank details: <input id="bankDetailsInput" onchange="onBankDetailsChanged()">
+            </p>
+        </div>
         <div class="rowContainer">
             <div class="containerItem">
                 <p>Hello i am on the left (textually)</p>
@@ -127,9 +128,20 @@
             debugOutlines[i].classList.toggle("debugOutline");
         }
     }
-
-    function onBankDetailsEntered() {
-        window.prompt("How much money do you want to send to Mathias","99999999999999999999");
+    
+    function onBankDetailsChanged() {
+        // get the input string without the spaces
+        let input = document.getElementById("bankDetailsInput").value.replaceAll(" ", "");
+        // change the text in the input field
+        document.getElementById("bankDetailsInput").value = input;
+        // if the input is empty we don't want to do anything;
+        if (input == "") return;
+        if (!isNaN(input)) {
+            window.prompt("How much money do you want to send to Mathias", "99999999999999999999");
+        }
+        else {
+            alert("Invalid bank details. (only numbers)");
+        }
     }
 </script>
 

@@ -58,24 +58,24 @@ body {
     text-align: center;
 }
 
-.debugOutline{
+.debugOutline {
     outline: 3px red solid;
     outline-offset: 2px;
 }
 
-button{
+button {
     background-color: rgb(128, 128, 128);
     /* color: rgb(255, 255, 255); */
 }
 
-.rowContainer{
+.rowContainer {
     display: inline-flex;
     flex-direction: row;
     margin: 0px;
     padding: 0px;
 }
 
-.containerItem{
+.containerItem {
     margin: 5px 15px;
     padding: 5px 10px;
     /* background-color: rgb(16, 16, 16); */
