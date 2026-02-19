@@ -78,5 +78,6 @@ button {
 .containerItem {
     margin: auto;
     padding: 5px 10px;
+    text-align: left;
     /* background-color: rgb(16, 16, 16); */
 }
