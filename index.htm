@@ -81,7 +81,7 @@
         </div>
         <div>
             <p>
-                enter your bank details: <input id="bankDetailsInput" onchange="onBankDetailsChanged()">
+                enter your bank details: <input id="bankDetailsInput">
             </p>
         </div>
         <div class="rowContainer">
@@ -121,6 +121,13 @@
         // toggle the debugOutline class off (it is on by default)
         debugOutlines[i].classList.toggle("debugOutline");
     }
+
+    document.getElementById("bankDetailsInput").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            onBankDetailsChanged();
+        }
+    });
 
     function toggleDebugOutline() {
         for (let i = 0; i < debugOutlines.length; i++) {
