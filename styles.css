@@ -60,6 +60,7 @@ body {
 
 .debugOutline{
     outline: 3px red solid;
+    outline-offset: 2px;
 }
 
 button{
