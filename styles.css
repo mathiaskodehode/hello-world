@@ -58,8 +58,8 @@ body {
     text-align: center;
 }
 
-.border{
-    border: 3px red solid;
+.debugOutline{
+    outline: 3px red solid;
 }
 
 button{

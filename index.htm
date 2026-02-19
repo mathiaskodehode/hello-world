@@ -17,7 +17,7 @@
     <h4>Heading4</h4>
     <h5>Heading5</h5>
     <h6>Heading6</h6>
-    <button type="button" onclick="toggleBorders()">
+    <button type="button" onclick="toggleDebugOutline()">
         TOGGLE BORDER ON ALL ELEMENTS INSIDE BODY
     </button>
     <main>
@@ -108,23 +108,23 @@
 
     // get all elements inside <body>
     const bodyElements = document.body.getElementsByTagName("*");
-    const borders = [];
+    const debugOutlines = [];
     for (let i = 0; i < bodyElements.length; i++) {
         var e = bodyElements[i];
-        // ignore elements that already have the border class
-        if (e.classList.contains("border")) continue;
-        // add border class to elements that don't have it
-        e.classList.add("border");
-        // populate array with the elements we added the border class to
-        borders.push(e);
-        // toggle the border class off (it is on by default)
-        borders[i].classList.toggle("border");
+        // ignore elements that already have the debugOutline class
+        if (e.classList.contains("debugOutline")) continue;
+        // add debugOutline class to elements that don't have it
+        e.classList.add("debugOutline");
+        // populate array with the elements we added the debugOutline class to
+        debugOutlines.push(e);
+        // toggle the debugOutline class off (it is on by default)
+        debugOutlines[i].classList.toggle("debugOutline");
     }
 
-    function toggleBorders() {
-        for (let i = 0; i < borders.length; i++) {
-            console.debug(borders[i]);
-            borders[i].classList.toggle("border");
+    function toggleDebugOutline() {
+        for (let i = 0; i < debugOutlines.length; i++) {
+            console.debug(debugOutlines[i]);
+            debugOutlines[i].classList.toggle("debugOutline");
         }
     }
 
