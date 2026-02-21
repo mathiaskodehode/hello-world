@@ -38,14 +38,8 @@ div.intro {
 
 main {
     font-family: roboto;
-}
-
-div.list {
-    margin: 15px 25px;
-    padding: 5px 10px;
-    border: 2px solid;
-    display: inline-flex;
-    flex-direction: column;
+    /* padding: 5px; */
+    /* margin: 5px; */
 }
 
 footer.footer {
@@ -68,16 +62,24 @@ button {
     /* color: rgb(255, 255, 255); */
 }
 
-.rowContainer {
+.horizontalList {
     display: inline-flex;
     flex-direction: row;
     margin: 0px;
     padding: 0px;
 }
 
-.containerItem {
+.verticalList {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px 5px;
+    padding: 5px 5px;
+}
+
+.listItems {
     margin: auto;
-    padding: 5px 10px;
+    padding: 0px;
+    margin: 10px;
     text-align: left;
-    /* background-color: rgb(16, 16, 16); */
+    list-style: symbols(cyclic "🦐" "💀" "🐄");
 }

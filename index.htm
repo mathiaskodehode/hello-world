@@ -16,34 +16,25 @@
     <h4>Heading4</h4>
     <h5>Heading5</h5>
     <h6>Heading6</h6>
-    <button type="button" onclick="toggleDebugOutline()">
+    <button onclick="toggleDebugOutline()">
         TOGGLE DEBUG OUTLINE ON ALL ELEMENTS INSIDE BODY
     </button>
     <main>
         <div class="intro">
-            <div class="rowContainer">
-                <div class="containerItem">
-
-                    <p>
-                        Hello my name is paragraph.
-                    </p>
-                </div>
-                <div class="containerItem">
-                    <p>
-                        Wow, my name is<br>
-                        also paragraph, but<br>
-                        I have a middle<br>
-                        name too - it's break.
-                    </p>
-                </div>
-                <div class="containerItem">
-                    <p>
-                        <strong>
-                            bold text is illegal. strong text however, is legal.
-                        </strong>
-                    </p>
-                </div>
-            </div>
+            <p>
+                Hello my name is paragraph.
+            </p>
+            <p>
+                Wow, my name is<br>
+                also paragraph, but<br>
+                I have a middle<br>
+                name too - it's break.
+            </p>
+            <p>
+                <strong>
+                    bold text is illegal. strong text however, is legal.
+                </strong>
+            </p>
             <p>
                 this entire section is inside a
                 <span style="color:red">red</span> and
@@ -58,44 +49,66 @@
                     Emphasis.
                 </em>
             </p>
+        </div>
+        <div>
+            <p>
+            </p>
             <button onclick="document.getElementById('moo').play();">
                 moo 🐄
             </button>
             <p>
                 <img src="./images/image.png" alt="a screenshot of the html file" width="450">
             </p>
-        </div>
-        <div class="list">
-            <h2>
-                List of items
-            </h2>
-            <ul>
-                <div class="containerItem">
-                    <li>
-                        item
-                    </li>
-                    <li>
-                        item with long name
-                    </li>
-                    <li>
-                        item with an even longer name
-                    </li>
-                </div>
-            </ul>
-        </div>
-        <div>
             <p>
                 enter your bank details: <input id="bankDetailsInput">
             </p>
-        </div>
-        <div class="rowContainer">
-            <div class="containerItem">
-                <p>Hello i am on the left (textually)</p>
-            </div>
-            <div class="containerItem">
-                <p>Hello i am an idiot (generally) <br>
+            <div class="horizontalList">
+                <div class="listItems">
+                    Hello i am on the left (textually)
+                </div>
+                <div class="listItems">
+                    Hello i am an idiot (generally) <br>
                     line break <br>
-                    another line break...</p>
+                    another line break...
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2> a horizonal list of two vertical lists:</h2>
+            <div class="horizontalList">
+                <div class="listItems">
+                    <div class="verticalList">
+                        <div class="listItems">
+                            <li>
+                                test left 1
+                            </li>
+                            <li>
+                                test left 2
+                            </li>
+                            <li>
+                                test left 3
+                            </li>
+                            <li>
+                                test left 4
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="listItems">
+                    <div class="verticalList">
+                        <div class="listItems">
+                            <li>
+                                test right 1
+                            </li>
+                            <li>
+                                test right 2
+                            </li>
+                            <li>
+                                test right 3
+                            </li>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -108,7 +121,7 @@
     </footer>
 </body>
 
-<script>
+<script defer>
     // script is at the bottom to make sure all elements have been loaded
 
     // get all elements inside <body>
@@ -142,7 +155,7 @@
 
     function onBankDetailsChanged() {
         // get the input string without the spaces
-        let input = document.getElementById("bankDetailsInput").value.replaceAll(" ", "");
+        var input = document.getElementById("bankDetailsInput").value.replaceAll(" ", "");
         // change the text in the input field
         document.getElementById("bankDetailsInput").value = input;
         // if the input is empty we don't want to do anything;
@@ -157,6 +170,7 @@
             else {
                 alert("Invalid bank details. (only numbers)");
             }
+            // delaying by 0 milliseconds.
         }, 0);
     }
 </script>
